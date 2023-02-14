@@ -12,15 +12,57 @@
 
 int main()
 {
-    // printf("Masukkan file jadwal matakuliah: ");
-    // printf("Aduh Syauqiii, masa nama matakuliah aja sampe salah");
-    // printf("Syauqi mahasiswa teladan belum pernah cabut\n");
-    // printf("\nSisa jatah absen ... sebanyak ... kali");
-    // printf("\nAman broo cabut aja");
-    // printf("\nSisa jatah absen ... habis");
-    // printf("\nUdah gila lu qi kalo masih mau cabut");
-    // printf("\nAduh ngulang ...!!");
-    // printf("\nWaktunya minta maaf ke dosen hehe :)");
-    
+    FILE *fp;
+    char filename[100];
+    char *namafile;
+    char line[200];
+    int count;
+    char *day;
+    char *month;
+    char *year;
+    char *keterangan;
+
+    printf("Masukkan file jadwal matakuliah: ");
+    scanf("%s", filename);
+
+    fp = fopen(filename, "r");
+    if (fp == NULL)
+    {
+        printf("Aduh Syauqiii, masa nama matakuliah aja sampe salah");
+        return 1;
+    }
+
+    count = 0;
+    namafile = strtok(filename, ".");
+    while (fgets(line, sizeof(line), fp))
+    {
+        count++;
+        year = strtok(line, "-");
+        month = strtok(NULL, "-");
+        day = strtok(NULL, " ");
+        keterangan = strtok(NULL, "\n");
+        printf("%s/%s/%s %s\n", day, month, year, keterangan);
+    }
+    if (count == 0)
+    {
+        printf("Syauqi mahasiswa teladan belum pernah cabut\n");
+    }
+
+    if (count < 3)
+    {
+        printf("\nSisa jatah absen %s sebanyak %d kali", namafile, 3 - count);
+        printf("\nAman broo cabut aja");
+    }
+    else if (count == 3)
+    {
+        printf("\nSisa jatah absen %s habis", namafile);
+        printf("\nUdah gila lu qi kalo masih mau cabut");
+    }
+    else
+    {
+        printf("\nAduh ngulang %s!!", namafile);
+        printf("\nWaktunya minta maaf ke dosen hehe :)");
+    }
+    fclose(fp);
     return 0;
 }
