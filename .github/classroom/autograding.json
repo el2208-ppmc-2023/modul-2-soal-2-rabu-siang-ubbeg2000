@@ -45,7 +45,7 @@
       "setup": "make main",
       "run": "./main",
       "input": "pmc.txt",
-      "output": "12/02/2023 Abis nonton bola kesiangan\r\n14/02/2023 Diajak Rama cabut\r\n17/02/2023 Kirain kelasnya online\r\nSisa jatah absen pmc habis\r\nUdah gila lu qi kalo masih mau cabut",
+      "output": "12/02/2023 Abis nonton bola kesiangan\r\n14/02/2023 Diajak Rama cabut\r\n17/02/2023 Kirain kelasnya online\r\n\r\nSisa jatah absen pmc habis\r\nUdah gila lu qi kalo masih mau cabut",
       "comparison": "included",
       "timeout": 10,
       "points": 15
