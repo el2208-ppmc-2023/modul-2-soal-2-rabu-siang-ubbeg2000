@@ -29,7 +29,7 @@ int main()
     if (fp == NULL)
     {
         printf("Aduh Syauqiii, masa nama matakuliah aja sampe salah");
-        return 1;
+        return 0;
     }
 
     count = 0;
