@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "1",
+      "setup": "make main",
+      "run": "./main",
+      "input": "sisdig.txt",
+      "output": "Aduh Syauqiii, masa nama matakuliah aja sampe salah",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "2",
+      "setup": "make main",
+      "run": "./main",
+      "input": "medan.txt",
+      "output": "Syauqi mahasiswa teladan belum pernah cabut\r\n\r\nSisa jatah absen medan sebanyak 3 kali\r\nAman broo cabut aja",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "3",
+      "setup": "make main",
+      "run": "./main",
+      "input": "sinsis.txt",
+      "output": "10/02/2023 Lupa absen padahal masuk kelas\r\n\r\nSisa jatah absen sinsis sebanyak 2 kali\r\nAman broo cabut aja",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "4",
+      "setup": "make main",
+      "run": "./main",
+      "input": "elka.txt",
+      "output": "11/02/2023 Salah liat jadwal\r\n18/02/2023 Diusir pak Mervin :(\r\n\r\nSisa jatah absen elka sebanyak 1 kali\r\nAman broo cabut aja",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "5",
+      "setup": "make main",
+      "run": "./main",
+      "input": "pmc.txt",
+      "output": "12/02/2023 Abis nonton bola kesiangan\r\n14/02/2023 Diajak Rama cabut\r\n17/02/2023 Kirain kelasnya online\r\nSisa jatah absen pmc habis\r\nUdah gila lu qi kalo masih mau cabut",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "6",
+      "setup": "make main",
+      "run": "./main",
+      "input": "matrek.txt",
+      "output": "11/02/2023 Masih ngejar deadline laprak (bismillah kekejar)\r\n18/02/2023 Masih ngejar deadline laprak (ga lagi deh)\r\n21/02/2023 Masih ngejar deadline laprak (sumpah ini terakhir)\r\n26/02/2023 Masih ngejar deadline laprak (hehe jadi kebiasaan)\r\n\r\nAduh ngulang matrek!!\r\nWaktunya minta maaf ke dosen hehe :)",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    }
+  ]
+}
